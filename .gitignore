@@ -1,0 +1,35 @@
+It seems your files haven't been properly staged and committed. Here's what to do:
+*.class
+
+1. First, create a `.gitignore` file to exclude compiled class files:
+
+````text
+*.class
+````
+
+2. Then run these commands in order:
+
+````bash
+# Initialize git repository
+git init
+
+# Add .gitignore
+git add .gitignore
+
+# Add your Java file
+git add Rectangle2.java
+
+# Commit your changes
+git commit -m "Added Rectangle2 class with area calculation"
+
+# Create and switch to main branch
+git branch -M main
+
+# Add remote repository
+git remote add origin https://github.com/Dheerajnaik04/java_prac.git
+
+# Push to GitHub
+git push -u origin main
+````
+
+This should properly stage, commit, and push your code while ignoring the compiled `.class` files. If you get a permission error during push, make sure you're authenticated with GitHub.
